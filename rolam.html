@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rólam — Ughy Kinga · Nail Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+.about-hero{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(26px,4vw,56px);align-items:center}
+.about-hero .ph{border-radius:var(--rad);overflow:hidden;position:relative;background:#111;aspect-ratio:3/4}
+.about-hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,56px);align-items:start}
+.form-ok{border:1px solid rgba(63,160,122,.5);background:var(--em-darker);color:var(--em-lt);border-radius:var(--rad-sm);padding:14px 16px;font-size:14px;margin-top:14px}
+.ig-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ig-strip img{aspect-ratio:1;object-fit:cover;border-radius:var(--rad-sm)}
+@media(max-width:900px){.about-hero,.contact-grid{grid-template-columns:1fr}.ig-strip{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="wm">Ughy Kinga<small>NAIL TRAINER</small></div><div class="ln"></div></div>
+
+<div class="trust">
+  <span data-i18n="c.trust1">✓ Biztonságos bankkártyás fizetés</span>
+  <span data-i18n="c.trust2">✓ Azonnali hozzáférés</span>
+  <span><b data-i18n="c.trust3">✓ 3 hónapig újranézhető</b></span>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="wm" href="index.html">Ughy Kinga<small>NAIL TRAINER</small></a>
+    <nav class="nav" id="nav">
+      <div class="lang drawer-lang">
+        <button data-lang="hu" class="on">HU</button>
+        <button data-lang="ro">RO</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="index.html" data-i18n="c.nav.home">Kezdőlap</a>
+      <a href="kurzusok.html" data-i18n="c.nav.courses">Kurzusok</a>
+      <a href="galeria.html" data-i18n="c.nav.gallery">Galéria</a>
+      <a class="on" href="rolam.html" data-i18n="c.nav.about">Rólam</a>
+      <a class="acc" href="kurzusaim.html" data-i18n="c.nav.mine">Kurzusaim</a>
+      <a class="drawer-login btn btn-gold" href="kurzusaim.html"><span data-i18n="c.login">Belépés</span></a>
+    </nav>
+    <div class="hdr-act">
+      <div class="lang" id="lang">
+        <button data-lang="hu" class="on">HU</button>
+        <button data-lang="ro">RO</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="kurzusaim.html"><span data-i18n="c.login">Belépés</span></a>
+      <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="sec" style="padding-top:clamp(40px,5vw,72px)">
+    <div class="wrap">
+      <div class="about-hero">
+        <figure class="ph rv" style="margin:0"><img src="assets/kinga-3.jpg" alt="Ughy Kinga"></figure>
+        <div>
+          <p class="eyebrow rv" data-i18n="r.eyebrow">Rólam</p>
+          <h1 class="rv rv-d1" style="font-size:clamp(34px,4.8vw,56px);margin-bottom:22px" data-i18n="r.h1">Ughy Kinga<br><em>Nail Trainer</em></h1>
+          <blockquote class="rv rv-d2" data-i18n="r.q">Nem trükköket adok át, hanem egy rendszert, ami a szalonban is működik.</blockquote>
+          <p class="lead rv rv-d2" data-i18n="r.p1">Körömépítő oktató vagyok. Géltechnikát, formákat és szalontechnikát tanítok — élőben és online egyaránt.</p>
+          <p class="lead rv rv-d3" data-i18n="r.p2">A képzéseimen nem egy-egy látványos díszítést mutatok meg, hanem a teljes munkafolyamatot: az előkészítéstől a fedésig, abban a sorrendben és azzal a tempóval, ahogy egy valódi vendégnél dolgozom. Ez az, amitől a munkád nemcsak szebb, hanem <b style="color:var(--ink)">gyorsabb és kiszámíthatóbb</b> is lesz.</p>
+          <div class="stats rv rv-d3" style="margin-top:28px">
+            <div><b data-count="1111">0</b><small data-i18n="r.s1">Munka az Instagramon</small></div>
+            <div><b data-count="952">0</b><small data-i18n="r.s2">Követő</small></div>
+            <div><b>5</b><small data-i18n="r.s3">Online kurzus</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ÉLŐ KÉPZÉSEK ============ -->
+  <section class="sec" style="background:var(--bg-2)">
+    <div class="wrap">
+      <div class="split rev rv">
+        <div class="sp-txt">
+          <p class="eyebrow" data-i18n="r.live.eyebrow">Élőben is</p>
+          <h2 style="margin-bottom:18px" data-i18n="r.live.h2">Személyes képzések és masterclassok</h2>
+          <p class="lead" data-i18n="r.live.p1">Az online kurzusok mellett rendszeresen tartok személyes képzéseket is — kis létszámmal, hogy mindenkinek jusson idő. A legutóbbi a <b style="color:var(--ink)">Szalontechnika Masterclass</b> volt: egy nap, amin a szalonmunka összes trükkjét végigvettük.</p>
+          <p class="lead" data-i18n="r.live.p2">Az online kurzusok ugyanazt a tananyagot adják — csak akkor nézed meg, amikor neked jó, és annyiszor, ahányszor kell.</p>
+          <a class="link-u" href="#kapcsolat" data-i18n="r.live.link">Érdekel egy élő képzés →</a>
+        </div>
+        <figure class="sp-img" style="margin:0">
+          <img src="assets/ig/ig-769051369.jpg" alt="Ughy Kinga élő képzésen">
+          <figcaption>Élő képzés · Velvet Bloom</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;max-width:none;flex-wrap:wrap">
+        <div><p class="eyebrow">Instagram</p><h2 style="font-size:clamp(24px,3vw,34px)">@ughy_kinga</h2></div>
+        <a class="link-u" href="https://www.instagram.com/ughy_kinga/" target="_blank" rel="noopener" data-i18n="r.ig.follow">Kövess be →</a>
+      </div>
+      <div class="ig-strip rv">
+        <img src="assets/ig/ig-770901462.jpg" alt="Masterclass plakát" loading="lazy">
+        <img src="assets/ig/ig-764089446.jpg" alt="Munka" loading="lazy">
+        <img src="assets/ig/ig-757267407.jpg" alt="Munka" loading="lazy">
+        <img src="assets/ig/ig-760964583.jpg" alt="Munka" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KAPCSOLAT ============ -->
+  <section class="sec" id="kapcsolat" style="background:var(--bg-2)">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow rv" data-i18n="r.k.eyebrow">Kapcsolat</p>
+          <h2 class="rv rv-d1" style="margin-bottom:18px" data-i18n="r.k.h2">Kérdésed van? Írj bátran.</h2>
+          <p class="lead rv rv-d2" data-i18n="r.k.p1">Ha nem tudod, melyik kurzussal érdemes kezdened, írd le egy mondatban, hol tartasz és mi akad meg a munkádban — megmondom, melyik segít ezen a leggyorsabban.</p>
+          <p class="lead rv rv-d2" data-i18n="r.k.p2">Élő képzés iránt is itt tudsz érdeklődni.</p>
+          <div class="rv rv-d3" style="margin-top:26px">
+            <a class="btn btn-ghost" href="https://www.instagram.com/ughy_kinga/" target="_blank" rel="noopener"><span data-i18n="r.k.ig">Írj Instagramon</span></a>
+          </div>
+        </div>
+
+        <form class="rv rv-d1" data-demo>
+          <div class="field"><label for="nev" data-i18n="r.f.name">Neved</label><input id="nev" type="text" required placeholder="Kovács Anna" data-i18n-ph="r.f.name.ph"></div>
+          <div class="field"><label for="email" data-i18n="r.f.email">E-mail-cím</label><input id="email" type="email" required placeholder="anna@example.com" data-i18n-ph="r.f.email.ph"></div>
+          <div class="field">
+            <label for="targy" data-i18n="r.f.subj">Miben segíthetek?</label>
+            <select id="targy">
+              <option data-i18n="r.o1">Melyik kurzussal kezdjek?</option>
+              <option data-i18n="r.o2">Kérdésem van egy kurzusról</option>
+              <option data-i18n="r.o3">Élő képzés érdekel</option>
+              <option data-i18n="r.o4">Fizetéssel / hozzáféréssel kapcsolatos gond</option>
+              <option data-i18n="r.o5">Egyéb</option>
+            </select>
+          </div>
+          <div class="field"><label for="uzi" data-i18n="r.f.msg">Üzenet</label><textarea id="uzi" placeholder="Írd le pár mondatban, hol tartasz…" data-i18n-ph="r.f.msg.ph"></textarea></div>
+          <div class="field" style="display:flex;gap:10px;align-items:flex-start">
+            <input type="checkbox" id="gdpr" required style="width:auto;margin-top:6px">
+            <label for="gdpr" style="letter-spacing:0;text-transform:none;font-size:12.5px;color:var(--muted);font-weight:400;line-height:1.5" data-i18n="r.f.gdpr">
+              Hozzájárulok, hogy a megadott adataimat Ughy Kinga a megkeresésem megválaszolásához kezelje.
+            </label>
+          </div>
+          <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center"><span data-i18n="r.f.send">Üzenet küldése</span></button>
+          <div class="form-ok" hidden data-i18n="r.f.ok">Köszönöm, megérkezett! Hamarosan válaszolok e-mailben.</div>
+        </form>
+      </div>
+
+      <div class="demo-note rv" style="margin-top:clamp(26px,3vw,38px)"><span>ⓘ</span><span data-i18n="r.demo"><b>Látványterv.</b> Az űrlap kitölthető és visszajelez, de még nem küld sehova — ehhez kell egy e-mail-cím. A számokat és az idézetet Kinga saját Instagram-profiljából és plakátjából vettem; a személyes bemutatkozó szöveget ő fogja véglegesíteni.</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <div class="wm">Ughy Kinga<small>NAIL TRAINER</small></div>
+        <p class="about" data-i18n="c.ftr.about">Online körömépítés-kurzusok. Szalontechnika videón, lépésről lépésre — hogy gyorsabban, precízebben és magabiztosabban dolgozz.</p>
+      </div>
+      <div>
+        <h4 data-i18n="c.ftr.pages">Oldalak</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="c.nav.home">Kezdőlap</a></li>
+          <li><a href="kurzusok.html" data-i18n="c.nav.courses">Kurzusok</a></li>
+          <li><a href="galeria.html" data-i18n="c.nav.gallery">Galéria</a></li>
+          <li><a href="rolam.html" data-i18n="c.nav.about">Rólam</a></li>
+          <li><a href="kurzusaim.html" data-i18n="c.nav.mine">Kurzusaim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="c.ftr.courses">Kurzusok</h4>
+        <ul>
+          <li><a href="kurzus.html">Baby Boomer</a></li>
+          <li><a href="kurzus.html" data-i18n="c.n.crispy">Crispy géllakk</a></li>
+          <li><a href="kurzus.html">Slim tip</a></li>
+          <li><a href="kurzus.html">Tipp Nails</a></li>
+          <li><a href="kurzus.html" data-i18n="c.n.short">Rövid manikűr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="c.ftr.contact">Kapcsolat</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/ughy_kinga/" target="_blank" rel="noopener">Instagram · @ughy_kinga</a></li>
+          <li><a href="#kapcsolat" data-i18n="c.ftr.msg">Írj üzenetet</a></li>
+        </ul>
+        <h4 style="margin-top:22px" data-i18n="c.ftr.nl">Hírlevél</h4>
+        <form class="nl" onsubmit="return false">
+          <input type="email" placeholder="E-mail-cím" data-i18n-ph="c.ftr.email" aria-label="E-mail">
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© 2026 Ughy Kinga · Nail Trainer</span>
+      <span class="pay"><i>VISA</i><i>MC</i><i>APPLE</i><i>GPAY</i></span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="locale.js"></script>
+</body>
+</html>
