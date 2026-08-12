@@ -231,10 +231,14 @@
           <li><a href="rolam.html#kapcsolat" data-i18n="c.ftr.msg">Írj üzenetet</a></li>
         </ul>
         <h4 style="margin-top:22px" data-i18n="c.ftr.nl">Hírlevél</h4>
-        <form class="nl" onsubmit="return false">
-          <input type="email" placeholder="E-mail-cím" data-i18n-ph="c.ftr.email" aria-label="E-mail">
+        <form class="nl" name="hirlevel" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
+          <input type="hidden" name="form-name" value="hirlevel">
+          <p hidden aria-hidden="true"><label>Ezt hagyd üresen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <input type="email" name="email" required placeholder="E-mail-cím" data-i18n-ph="c.ftr.email" aria-label="E-mail">
           <button type="submit">→</button>
         </form>
+        <div class="form-ok nl-msg" hidden data-i18n="c.ftr.nlok">Köszönöm, feliratkoztál.</div>
+        <div class="form-err nl-msg" hidden data-i18n="c.ftr.nlerr">Most nem sikerült — próbáld újra később.</div>
       </div>
     </div>
     <div class="ftr-bot">

@@ -159,12 +159,47 @@
     });
   });
 
-  /* ---------- űrlap (demó) ---------- */
+  /* ---------- űrlapok ---------- */
+  // a visszajelző dobozt az űrlapon belül keressük, ha nincs, a szülőben
+  function msgBox(f, sel) {
+    return f.querySelector(sel) || (f.parentElement ? f.parentElement.querySelector(sel) : null);
+  }
+  function lezar(f, sel) {
+    var el = msgBox(f, sel);
+    if (el) el.hidden = false;
+    f.querySelectorAll('input,textarea,select,button').forEach(function (i) { i.disabled = true; });
+  }
+
+  // demó-űrlap: csak visszajelez (belépés — még nincs mögötte rendszer)
   document.querySelectorAll('form[data-demo]').forEach(function (f) {
+    f.addEventListener('submit', function (e) { e.preventDefault(); lezar(f, '.form-ok'); });
+  });
+
+  // éles űrlap: Netlify Forms, oldal-újratöltés nélkül
+  var helyi = location.protocol === 'file:';
+  document.querySelectorAll('form[data-ajax]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
-      var ok = f.querySelector('.form-ok');
-      if (ok) { ok.hidden = false; f.querySelectorAll('input,textarea,select,button').forEach(function (i) { i.disabled = true; }); }
+      var hiba = msgBox(f, '.form-err');
+      if (hiba) hiba.hidden = true;
+
+      // fájlból megnyitva nincs szerver — ilyenkor csak visszajelzünk
+      if (helyi) { lezar(f, '.form-ok'); return; }
+
+      var gomb = f.querySelector('button[type="submit"]');
+      if (gomb) gomb.disabled = true;
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(f)).toString()
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        lezar(f, '.form-ok');
+      }).catch(function () {
+        if (gomb) gomb.disabled = false;
+        if (hiba) hiba.hidden = false;
+      });
     });
   });
 })();

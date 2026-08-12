@@ -26,6 +26,8 @@
       'c.ftr.msg': 'Scrie-mi un mesaj',
       'c.ftr.nl': 'Newsletter',
       'c.ftr.email': 'Adresă de e-mail',
+      'c.ftr.nlok': 'Mulțumesc, te-ai abonat.',
+      'c.ftr.nlerr': 'Nu a mers acum — încearcă din nou mai târziu.',
       'c.videolang': 'Videoclipurile sunt în limba maghiară',
       /* kurzusnevek */
       'c.n.crispy': 'Crispy gel lac',
@@ -203,6 +205,7 @@
       'r.f.gdpr': 'Sunt de acord ca datele mele să fie folosite de Ughy Kinga pentru a răspunde mesajului meu.',
       'r.f.send': 'Trimite mesajul',
       'r.f.ok': 'Mulțumesc, a ajuns! Îți răspund în curând pe e-mail.',
+      'r.f.err': 'Mesajul nu a putut fi trimis acum. Încearcă din nou sau scrie-mi pe Instagram — mă găsești și acolo.',
       'r.demo': '<b>Machetă de prezentare.</b> Formularul se poate completa și dă un răspuns, dar încă nu trimite nicăieri — pentru asta e nevoie de o adresă de e-mail. Cifrele și citatul provin de pe profilul de Instagram și de pe afișul Kingăi; textul de prezentare îl va finaliza ea.',
 
       /* ---------- kurzusaim ---------- */
@@ -260,6 +263,8 @@
       'c.ftr.msg': 'Send a message',
       'c.ftr.nl': 'Newsletter',
       'c.ftr.email': 'Email address',
+      'c.ftr.nlok': 'Thank you, you’re subscribed.',
+      'c.ftr.nlerr': 'That didn’t go through — please try again later.',
       'c.videolang': 'The videos are in Hungarian',
       'c.n.crispy': 'Crispy gel polish',
       'c.n.short': 'Short manicure',
@@ -435,6 +440,7 @@
       'r.f.gdpr': 'I agree that Ughy Kinga may use my details to answer my enquiry.',
       'r.f.send': 'Send message',
       'r.f.ok': 'Thank you, it arrived! I’ll reply by email soon.',
+      'r.f.err': 'The message couldn’t be sent right now. Please try again, or write to me on Instagram — I’m there too.',
       'r.demo': '<b>Design mock-up.</b> The form can be filled in and responds, but it doesn’t send anywhere yet — that needs an email address. The numbers and the quote come from Kinga’s own Instagram profile and poster; she will finalise the personal introduction.',
 
       /* ---------- my courses ---------- */

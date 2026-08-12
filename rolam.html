@@ -130,12 +130,14 @@
           </div>
         </div>
 
-        <form class="rv rv-d1" data-demo>
-          <div class="field"><label for="nev" data-i18n="r.f.name">Neved</label><input id="nev" type="text" required placeholder="Kovács Anna" data-i18n-ph="r.f.name.ph"></div>
-          <div class="field"><label for="email" data-i18n="r.f.email">E-mail-cím</label><input id="email" type="email" required placeholder="anna@example.com" data-i18n-ph="r.f.email.ph"></div>
+        <form class="rv rv-d1" name="kapcsolat" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
+          <input type="hidden" name="form-name" value="kapcsolat">
+          <p hidden aria-hidden="true"><label>Ezt hagyd üresen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field"><label for="nev" data-i18n="r.f.name">Neved</label><input id="nev" name="nev" type="text" required placeholder="Kovács Anna" data-i18n-ph="r.f.name.ph"></div>
+          <div class="field"><label for="email" data-i18n="r.f.email">E-mail-cím</label><input id="email" name="email" type="email" required placeholder="anna@example.com" data-i18n-ph="r.f.email.ph"></div>
           <div class="field">
             <label for="targy" data-i18n="r.f.subj">Miben segíthetek?</label>
-            <select id="targy">
+            <select id="targy" name="targy">
               <option data-i18n="r.o1">Melyik kurzussal kezdjek?</option>
               <option data-i18n="r.o2">Kérdésem van egy kurzusról</option>
               <option data-i18n="r.o3">Élő képzés érdekel</option>
@@ -143,15 +145,16 @@
               <option data-i18n="r.o5">Egyéb</option>
             </select>
           </div>
-          <div class="field"><label for="uzi" data-i18n="r.f.msg">Üzenet</label><textarea id="uzi" placeholder="Írd le pár mondatban, hol tartasz…" data-i18n-ph="r.f.msg.ph"></textarea></div>
+          <div class="field"><label for="uzi" data-i18n="r.f.msg">Üzenet</label><textarea id="uzi" name="uzenet" placeholder="Írd le pár mondatban, hol tartasz…" data-i18n-ph="r.f.msg.ph"></textarea></div>
           <div class="field" style="display:flex;gap:10px;align-items:flex-start">
-            <input type="checkbox" id="gdpr" required style="width:auto;margin-top:6px">
+            <input type="checkbox" id="gdpr" name="gdpr" value="igen" required style="width:auto;margin-top:6px">
             <label for="gdpr" style="letter-spacing:0;text-transform:none;font-size:12.5px;color:var(--muted);font-weight:400;line-height:1.5" data-i18n="r.f.gdpr">
               Hozzájárulok, hogy a megadott adataimat Ughy Kinga a megkeresésem megválaszolásához kezelje.
             </label>
           </div>
           <button class="btn btn-gold" type="submit" style="width:100%;justify-content:center"><span data-i18n="r.f.send">Üzenet küldése</span></button>
           <div class="form-ok" hidden data-i18n="r.f.ok">Köszönöm, megérkezett! Hamarosan válaszolok e-mailben.</div>
+          <div class="form-err" hidden data-i18n="r.f.err">Az üzenetet most nem sikerült elküldeni. Próbáld újra, vagy írj Instagramon — ott is elérsz.</div>
         </form>
       </div>
 
@@ -195,10 +198,14 @@
           <li><a href="#kapcsolat" data-i18n="c.ftr.msg">Írj üzenetet</a></li>
         </ul>
         <h4 style="margin-top:22px" data-i18n="c.ftr.nl">Hírlevél</h4>
-        <form class="nl" onsubmit="return false">
-          <input type="email" placeholder="E-mail-cím" data-i18n-ph="c.ftr.email" aria-label="E-mail">
+        <form class="nl" name="hirlevel" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
+          <input type="hidden" name="form-name" value="hirlevel">
+          <p hidden aria-hidden="true"><label>Ezt hagyd üresen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <input type="email" name="email" required placeholder="E-mail-cím" data-i18n-ph="c.ftr.email" aria-label="E-mail">
           <button type="submit">→</button>
         </form>
+        <div class="form-ok nl-msg" hidden data-i18n="c.ftr.nlok">Köszönöm, feliratkoztál.</div>
+        <div class="form-err nl-msg" hidden data-i18n="c.ftr.nlerr">Most nem sikerült — próbáld újra később.</div>
       </div>
     </div>
     <div class="ftr-bot">
