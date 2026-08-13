@@ -290,6 +290,17 @@ blockquote{margin:0 0 22px;padding-left:20px;border-left:2px solid var(--gold);f
 .ftr li{margin-bottom:9px;font-size:14px;color:var(--muted-2)}
 .ftr li a:hover{color:var(--gold-lt)}
 .ftr .about{font-size:14px;color:var(--muted);max-width:34ch;margin-top:14px;line-height:1.7}
+/* billentyűzetes fókusz — csak Tab-navigációnál látszik, egérrel kattintva nem */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,
+input[type=checkbox]:focus-visible{
+  outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.nl input:focus-visible,
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{
+  outline:2px solid var(--gold);outline-offset:-2px}
+.btn:focus-visible{outline-offset:4px}
+/* arany gombon az arany gyűrű elmosódna — ott világos gyűrű megy */
+.btn-gold:focus-visible,.chip-own:focus-visible,.nl button:focus-visible{outline-color:var(--ink-strong)}
+
 /* űrlap-visszajelzés (globális — a kapcsolat-űrlap és a hírlevél is ezt használja) */
 .form-ok{border:1px solid rgba(63,160,122,.5);background:var(--em-darker);color:var(--em-lt);border-radius:var(--rad-sm);padding:14px 16px;font-size:14px;margin-top:14px}
 .form-err{border:1px solid rgba(201,169,97,.45);background:rgba(201,169,97,.08);color:var(--gold-lt);border-radius:var(--rad-sm);padding:14px 16px;font-size:14px;margin-top:14px}
